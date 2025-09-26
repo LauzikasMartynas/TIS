@@ -2,5 +2,5 @@
 Initial condition generator for SPH codes (Gadget family)
 
 1. Use make to create executable.
-2. Run it with *.par file as a parameter.
-3. Python script cuts the final shape and adds turbulence.
+2. Run ```./WVTICs *.par``` with a chosen parameter file.
+3. MT_IC.py cuts the final shape and adds turbulence.
