@@ -1,0 +1,85 @@
+Npart      1000000
+
+% Convergence of relaxation
+
+Maxiter 128
+% Recommended like 5.0 for 3D and 0.1 for 2D
+MpsFraction 3.0
+StepReduction 0.95
+LimitMps -1
+LimitMps10 -1
+LimitMps100 -1
+LimitMps1000 1
+
+% Parameters for Monte Carlo redistribution
+
+MoveFractionMin 0.005
+MoveFractionMax 0.1
+ProbesFraction 0.1
+RedistributionFrequency 5
+LastMoveStep 64
+
+% Artificial bias correction of resulting density
+
+BiasCorrection 0.0
+
+% Problem
+
+Problem_Flag 6
+Problem_Subflag 1
+
+PNG_Filename logos/DarthVader.png
+
+% Problem Descriptions
+%
+% 0 - Simple periodic tests
+%   0 - Constant Density
+%   1 - Top Hat with gradients
+%   2 - Sawtooth Density
+%   3 - Sine wave
+% 1 - Simple non-periodic tests
+%    0 - Gradient
+% 2 - Write Logos
+%   0 - Magneticum
+%   1 - PNG
+% 3 - Double Shock test
+%    0 - Mach 2                         (# does not start for high particle numbers)
+%    1 - Mach 3                         (# does not start for high particle numbers)
+%    2 - Mach 4                         (# does not start for high particle numbers)
+% 4 - Classical hydrodynamics tests
+%   0 - Sod Shock                       (# density for the high density region is very noisy)
+%   1 - Sedov Blast
+%   2 - Kelvin-Helmholtz Instability
+%   3 - Keplerian Ring                  (# Error in result. Needs to be checked.)
+%   4 - Cold Blob
+%   5 - Hydrostatic Sphere              (# not implemented yet)
+%   6 - Evrard Collapse
+%   7 - Zel'dovic Pancake
+%   8 - Box
+%   9 - Gresho-Vortex
+%   10 - Exponential Disk		        (# does not work)
+%   11 - Boss-Bodenheimer test
+%   12 - Isolated Cluster of Galaxies
+% 5 - Classical magnetohydrodynamics tests
+%   0 - Fast Rotor
+%   1 - Strong Blast
+%   2 - Orszang-Tang Vortex
+%   3 - Linear Alfvén Wave
+%   4 - Rayleigh-Taylor Instability
+%   5 - Ryu Jones Shocktube 1A          (# not working)
+%   6 - Ryu Jones Shocktube 1B          (# not working)
+%   7 - Ryu Jones Shocktube 2A          (# not working)
+%   8 - Ryu Jones Shocktube 2B          (# not working)
+%   9 - Ryu Jones Shocktube 3A          (# not working)
+%   10 - Ryu Jones Shocktube 3B         (# not working)
+%   11 - Ryu Jones Shocktube 4A         (# not working)
+%   12 - Ryu Jones Shocktube 4B         (# not working)
+%   13 - Ryu Jones Shocktube 4C         (# not working)
+%   14 - Ryu Jones Shocktube 4D         (# not working)
+%   15 - Ryu Jones Shocktube 5A         (# not working)
+%   16 - Ryu Jones Shocktube 5B         (# not working)
+% 6 - Custom user defined ics
+%   X - All which you define in user.c
+%   1 - Central Molecular Zone
+%   2 - Uniform box
+%   3 - Isothermal Sphere
